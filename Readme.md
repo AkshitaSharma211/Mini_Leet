@@ -100,3 +100,28 @@ For the first version, use a **sandboxed code execution service** (do not execut
 
 
 https://forum-scuba-97660747.figma.site/
+
+---
+
+## Local Setup
+
+### Environment Variables
+
+This project uses environment variables for API configuration. Before running locally:
+
+1. Copy the example env file:
+```bash
+   cp .env.example .env
+```
+2. Fill in your local values in `.env` (do not commit this file — it's gitignored).
+
+Required variables (see `.env.example` for the full template):
+- `VITE_API_BASE_URL` — base URL of the backend API (e.g. `http://localhost:5000/api`)
+- `VITE_JUDGE_API_KEY` — API key for Judge0 code execution service (once integrated)
+
+### Running the app
+
+```bash
+npm install
+npm run dev
+```
