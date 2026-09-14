@@ -118,14 +118,14 @@ git clone <repository-url>
 cd Mini_Leet
 
 # Install dependencies
-pnpm install
+npm install
 ```
 
 ### Development
 
 ```bash
 # Start the development server (runs on port 8443 by default)
-pnpm dev
+npm dev
 ```
 
 The app will be available at `http://localhost:8443` (or the port shown in terminal).
@@ -134,17 +134,17 @@ The app will be available at `http://localhost:8443` (or the port shown in termi
 
 ```bash
 # Build for production
-pnpm build
+npm build
 
 # Preview the production build locally
-pnpm preview
+npm preview
 ```
 
 ### Code Formatting
 
 ```bash
 # Format code with oxfmt
-pnpm format
+npm format
 ```
 
 ### Project Structure
