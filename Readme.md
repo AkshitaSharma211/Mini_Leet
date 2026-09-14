@@ -100,3 +100,70 @@ For the first version, use a **sandboxed code execution service** (do not execut
 
 
 https://forum-scuba-97660747.figma.site/
+
+---
+
+## Local Setup Instructions
+
+### Prerequisites
+
+- Node.js 22+
+- pnpm 9+ (recommended) or npm
+
+### Installation
+
+```bash
+# Clone the repository
+git clone <repository-url>
+cd Mini_Leet
+
+# Install dependencies
+pnpm install
+```
+
+### Development
+
+```bash
+# Start the development server (runs on port 8443 by default)
+pnpm dev
+```
+
+The app will be available at `http://localhost:8443` (or the port shown in terminal).
+
+### Production Build
+
+```bash
+# Build for production
+pnpm build
+
+# Preview the production build locally
+pnpm preview
+```
+
+### Code Formatting
+
+```bash
+# Format code with oxfmt
+pnpm format
+```
+
+### Project Structure
+
+```
+src/
+├── main.tsx       # React entrypoint
+├── App.tsx        # Primary application component
+├── index.css      # Global CSS + Tailwind v4 import
+└── vite-env.d.ts  # Vite type declarations
+```
+
+### Environment Variables
+
+Create a `.env` file in the root directory if needed:
+
+```env
+# Example variables (add as needed)
+VITE_API_URL=http://localhost:3000/api
+```
+
+> **Note:** This project uses Vite's `@` alias for `src/` imports (configured in `vite.config.ts`).
