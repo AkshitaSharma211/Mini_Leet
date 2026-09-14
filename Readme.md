@@ -103,25 +103,67 @@ https://forum-scuba-97660747.figma.site/
 
 ---
 
-## Local Setup
+## Local Setup Instructions
+
+### Prerequisites
+
+- Node.js 22+
+- pnpm 9+ (recommended) or npm
+
+### Installation
+
+```bash
+# Clone the repository
+git clone <repository-url>
+cd Mini_Leet
+
+# Install dependencies
+npm install
+```
+
+### Development
+
+```bash
+# Start the development server (runs on port 8443 by default)
+npm dev
+```
+
+The app will be available at `http://localhost:8443` (or the port shown in terminal).
+
+### Production Build
+
+```bash
+# Build for production
+npm build
+
+# Preview the production build locally
+npm preview
+```
+
+### Code Formatting
+
+```bash
+# Format code with oxfmt
+npm format
+```
+
+### Project Structure
+
+```
+src/
+├── main.tsx       # React entrypoint
+├── App.tsx        # Primary application component
+├── index.css      # Global CSS + Tailwind v4 import
+└── vite-env.d.ts  # Vite type declarations
+```
 
 ### Environment Variables
 
-This project uses environment variables for API configuration. Before running locally:
+Create a `.env` file in the root directory if needed:
 
-1. Copy the example env file:
-```bash
-   cp .env.example .env
+```env
+# Example variables (add as needed)
+VITE_API_URL=http://localhost:3000/api
 ```
-2. Fill in your local values in `.env` (do not commit this file — it's gitignored).
 
-Required variables (see `.env.example` for the full template):
-- `VITE_API_BASE_URL` — base URL of the backend API (e.g. `http://localhost:5000/api`)
-- `VITE_JUDGE_API_KEY` — API key for Judge0 code execution service (once integrated)
-
-### Running the app
-
-```bash
-npm install
-npm run dev
-```
+> **Note:** This project uses Vite's `@` alias for `src/` imports (configured in `vite.config.ts`).

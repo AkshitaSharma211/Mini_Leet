@@ -580,7 +580,7 @@ function Workspace({ problem, setScreen, darkMode }: { problem: Problem; setScre
 
 // ─── Screen 3: Profile ────────────────────────────────────────────────────────
 
-function Profile() {
+function Profile({ darkMode }: { darkMode: boolean }) {
   const totalSolved = PROBLEMS.filter((p) => p.solved).length;
   const easySolved = PROBLEMS.filter((p) => p.difficulty === "Easy" && p.solved).length;
   const mediumSolved = PROBLEMS.filter((p) => p.difficulty === "Medium" && p.solved).length;
