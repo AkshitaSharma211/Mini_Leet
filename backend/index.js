@@ -1,6 +1,11 @@
+require("dotenv").config();
 const express = require("express");
+const connectDB = require("./config/db");
+
 const app = express();
-const PORT = 5001;
+const PORT = process.env.PORT || 5001;
+
+connectDB();
 
 app.get("/", (req, res) => {
   res.send("Mini LeetCode backend is running");
